@@ -1,0 +1,53 @@
+{
+    "name": "firestark/testing",
+    "version": "0.0.1",
+    "description": "A unit testing framework.",
+    "type": "library",
+    "keywords": [
+        "eyedouble",
+        "firestark",
+        "lionar",
+        "unit testing",
+        "framework"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aron Wouters",
+            "email": "lionar@mail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Irsan van Wel",
+            "email": "vanwel@eyedouble.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "mockery/mockery": "*"
+    },
+    "require-dev": {
+        "firestark/support": "*"
+    },
+    "autoload": {
+        "psr-4": {
+
+        },
+        "files": [
+            "source/helpers.php",
+            "vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            
+        },
+        "classmap": [
+        	"docs/example/exercise.php"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev"
+}
