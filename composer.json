@@ -35,7 +35,7 @@
         },
         "files": [
             "source/helpers.php",
-            "vendor/hamcrest/hamcrest-php/hamcrest/Hamcrest.php"
+            "../../hamcrest/hamcrest-php/hamcrest/Hamcrest.php"
         ]
     },
     "autoload-dev": {
