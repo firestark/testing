@@ -14,3 +14,17 @@ if ( ! function_exists ( 'dd' ) )
 		array_map ( function ( $x ) { var_dump ( $x ); }, func_get_args ( ) ); die;
 	}
 }
+
+if ( ! function_exists ( 'dump' ) )
+{
+	/**
+	 * Dump the passed variables.
+	 *
+	 * @param  dynamic  mixed
+	 * @return void
+	 */
+	function dump ( )
+	{
+		var_dump ( func_get_args ( ) );
+	}
+}
