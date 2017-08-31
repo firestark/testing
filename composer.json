@@ -31,11 +31,8 @@
     },
     "autoload": {
         "psr-4": {
-
+        	"": "source"
         },
-        "classmap": [
-        	"source/mockery.php"
-        ],
         "files": [
             "source/helpers.php",
             "../../hamcrest/hamcrest-php/hamcrest/Hamcrest.php"
