@@ -33,6 +33,9 @@
         "psr-4": {
 
         },
+        "classmap": [
+        	"source/mockery.php"
+        ],
         "files": [
             "source/helpers.php",
             "../../hamcrest/hamcrest-php/hamcrest/Hamcrest.php"
