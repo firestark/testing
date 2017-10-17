@@ -1,20 +1,6 @@
 <?php
 
 
-if ( ! function_exists ( 'dd' ) )
-{
-	/**
-	 * Dump the passed variables and end the script.
-	 *
-	 * @param  dynamic  mixed
-	 * @return void
-	 */
-	function dd ( )
-	{
-		array_map ( function ( $x ) { var_dump ( $x ); }, func_get_args ( ) ); die;
-	}
-}
-
 if ( ! function_exists ( 'dump' ) )
 {
 	/**
@@ -25,6 +11,20 @@ if ( ! function_exists ( 'dump' ) )
 	 */
 	function dump ( )
 	{
-		var_dump ( func_get_args ( ) );
+		array_map ( function ( $x ) { var_dump ( $x ); }, func_get_args ( ) );
+	}
+}
+
+if ( ! function_exists ( 'dd' ) )
+{
+	/**
+	 * Dump the passed variables and end the script.
+	 *
+	 * @param  dynamic  mixed
+	 * @return void
+	 */
+	function dd ( )
+	{
+		dump ( ); die;
 	}
 }
