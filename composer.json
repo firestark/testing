@@ -4,50 +4,48 @@
     "description": "A unit testing framework.",
     "type": "library",
     "keywords": [
-        "eyedouble",
-        "firestark",
-        "lionar",
-        "unit testing",
-        "framework"
+        "unit testing"
     ],
     "license": "MIT",
     "authors": [
         {
             "name": "Aron Wouters",
-            "email": "lionar@mail.com",
-            "role": "Developer"
-        },
-        {
-            "name": "Irsan van Wel",
-            "email": "vanwel@eyedouble.nl",
+            "email": "firestark@mail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "mockery/mockery": "*"
+    	"firestark/console": "*",
+    	"firestark/support": "*",
+    	"illuminate/container": "*",
+    	"illuminate/support": "*",
+    	"symfony/var-dumper": "*"
     },
     "require-dev": {
-        "firestark/support": "*"
+        
     },
     "autoload": {
         "psr-4": {
-        	"": "source"
+        	"test\\": "source"
         },
+        "classmap": [
+        	"test.php"
+        ],
         "files": [
-            "source/helpers.php",
-            "../../hamcrest/hamcrest-php/hamcrest/Hamcrest.php"
+        	"helpers.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            
+           
         },
         "classmap": [
-        	"docs/example/exercise.php"
+        	
         ]
     },
     "config": {
         "preferred-install": "dist"
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "bin": [ "bin/test" ]
 }

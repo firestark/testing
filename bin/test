@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../../autoload.php';
+
+$app = new test\app;
+facade::setFacadeApplication ( $app );
+
+$app->instance ( test\app::class, $app );
+$app->instance ( test\suites::class, new test\suites );
+$app->instance ( test\scenarios::class, new test\scenarios );
+$app->instance ( 'test', $app->make ( test\facade::class ) );
+
+
+
+test::suite ( 'pricing', __DIR__ . '/../api/testing/pricing' );
+
+
+$console = new console\app ( $app );
+$console->add ( $app->make ( test\console\commands\suiteRunner::class ) );
+$console->add ( $app->make ( test\console\commands\scenarioRunner::class ) );
+$console->run ( );
