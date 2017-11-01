@@ -15,10 +15,6 @@
         }
     ],
     "require": {
-    	"firestark/console": "*",
-    	"firestark/support": "*",
-    	"illuminate/container": "*",
-    	"illuminate/support": "*",
     	"symfony/var-dumper": "*"
     },
     "require-dev": {
@@ -26,13 +22,13 @@
     },
     "autoload": {
         "psr-4": {
-        	"test\\": "source"
+        	"testing\\": "source"
         },
         "classmap": [
-        	"test.php"
+        	
         ],
         "files": [
-        	"helpers.php"
+        	"source/debug/functions.php"
         ]
     },
     "autoload-dev": {
@@ -47,5 +43,5 @@
         "preferred-install": "dist"
     },
     "minimum-stability": "dev",
-    "bin": [ "bin/test" ]
+    "bin": [  ]
 }
