@@ -29,7 +29,7 @@
         	
         ],
         "files": [
-        	"source/debug/debugger.php"
+        	"source/debug/debugger.php",
         	"source/debug/functions.php"
         ]
     },
