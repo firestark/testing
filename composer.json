@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+    	"filp/whoops": "*",
     	"symfony/var-dumper": "*"
     },
     "require-dev": {
@@ -28,6 +29,7 @@
         	
         ],
         "files": [
+        	"source/debug/debugger.php"
         	"source/debug/functions.php"
         ]
     },
